@@ -16,7 +16,8 @@
 
 compileKotlin {
     kotlinOptions {
-        freeCompilerArgs += ["-Xskip-runtime-version-check"]
+        useIR = true
+        freeCompilerArgs += ["-Xskip-runtime-version-check", -Xallow-jvm-ir-dependencies]
         jvmTarget = "1.8"
     }
     sourceCompatibility = JavaVersion.VERSION_1_8
